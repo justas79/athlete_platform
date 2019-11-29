@@ -1,0 +1,45 @@
+@(
+        request: Http.Request,
+        athletes: java.util.List[HammerWomen]
+)
+    @main("") {
+        @defining(play.core.PlayVersion.current) { version =>
+
+            <section id="content">
+                <div class="wrapper doc">
+                    <article>
+                        <h2>Table of the latest results for Hammer Throw (Men)</h2>
+
+
+                    @* ================= *@
+                    @* Sample table *@
+                    @* ================= *@
+                    <p>
+                        <table>
+                        @for(athlete <- athletes){
+                            <tr>
+                                <td>@athlete.getAthleteId()</td>
+                                <td>@athlete.getMark()</td>
+                            </tr>
+                        }
+                        </table>
+                    </p>
+                    @* ================= *@
+
+
+
+                    </article>
+                    <aside>
+                    @commonSidebar()
+                    </aside>
+
+
+                </div>
+            </section>
+
+
+
+
+
+        }
+    }

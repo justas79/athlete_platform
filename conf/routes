@@ -1,0 +1,8 @@
+GET    /                          controllers.HomeController.index(request: Request)
+GET    /men                     controllers.HomeController.men(request: Request)
+GET    /women                     controllers.HomeController.women
+GET    /toplist                   controllers.HomeController.toplist
+
+# Map static resources from the /public folder to the /assets URL path
+GET    /assets/*file             controllers.Assets.versioned(path="/public", file: Asset)
+GET    /favicon.ico              controllers.Assets.at(path="/public", file="images/cup.svg")
