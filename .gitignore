@@ -35,3 +35,4 @@ conf/evolutions/master/1.sql
 conf/evolutions/reader/1.sql
 
 .cache
+logs/application.log
